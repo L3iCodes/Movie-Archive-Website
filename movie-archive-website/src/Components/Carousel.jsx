@@ -48,7 +48,7 @@ function Carousel({className, title, children}){
     return(
         <>
             <div className={`pl-[5%] pr-[5%] mt-9 relative w-full
-                            xl:mt-[-50px] xl:mb-[120px] z-20 ${className}`}>
+                            xl:mt-[-50px] xl:mb-[120px] lg:pl-[10%] lg:pr-[10%] z-20 ${className}`}>
                 <p className='mb-2 text-[1rem] font-bold tracking-widest
                               xl:text-[1.3rem]'>{title}</p>
                 <div className='w-full flex overflow-hidden gap-3 relative'>

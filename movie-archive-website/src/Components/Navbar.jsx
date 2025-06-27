@@ -12,6 +12,10 @@ function Navbar(){
         navigate(`/`);
     };
 
+    const browse = () => {
+        navigate(`/browse`);
+    };
+
     return(
         <>
             <div className="flex items-center w-full h-[50px] bg-primary pl-[5%] pr-[5%]
@@ -22,7 +26,7 @@ function Navbar(){
                 <div className='hidden z-10 md:flex w-full gap-5'>
                     <ul className='flex gap-5'>
                         <li onClick={home} className=' cursor-pointer'>Home</li>
-                        <li className=' cursor-pointer'>Browse</li>
+                        <li onClick={browse} className=' cursor-pointer'>Browse</li>
                         <li className=' cursor-pointer'>Watchlist</li>
                     </ul>
                     <div className='flex items-center w-[45%] bg-accent text-black pl-1.5 pr-1.5 rounded-2xl'>

@@ -66,4 +66,12 @@ export async function fetchActors(id){
     return data
 }
 
+export async function fetchMovieByGenre(id){
+    let response;
+    response = await fetch(`https://api.themoviedb.org/3/discover/movie?with_genres=${id}`, options);
+    const data = await response.json();
+    return data;
+}
+
+
 export default fetchData;
