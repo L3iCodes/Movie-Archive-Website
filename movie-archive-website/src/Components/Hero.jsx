@@ -31,8 +31,8 @@ function Hero({ title, img, genre, rating, overview, btnText, actionType, id}){
                                 lg:pl-[10%] lg:pr-[10%]
                                 xl:justify-center
                                 2xl:mt-[-40px]'>
-                    <h1 className=' font-bold text-[3rem] m-0
-                                    sm:text-[3.5rem]
+                    <h1 className=' font-bold text-[2rem] m-0
+                                    sm:text-[2.5rem]
                                     md:text-[4rem]
                                     lg:text-[4.5rem]
                                     xl:text-[5rem]'>

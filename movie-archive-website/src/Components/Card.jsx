@@ -7,7 +7,9 @@ import { useNavigate } from 'react-router-dom';
 export function HorizontalCard({ id, title, year, img, index }){
     const navigate = useNavigate();
     const redirect = () => {
-        navigate(`/movie/${id}`);
+        if (id){
+            navigate(`/movie/${id}`);
+        }
     };
 
     return(
@@ -31,7 +33,9 @@ export function HorizontalCard({ id, title, year, img, index }){
 export function VerticalCard({id, title, year, img, index}){
     const navigate = useNavigate();
     const redirect = () => {
-        navigate(`/movie/${id}`);
+        if (id){
+            navigate(`/movie/${id}`);
+        }
     };
 
     return(
@@ -44,7 +48,7 @@ export function VerticalCard({id, title, year, img, index}){
                     <img src={img} className='object-cover'></img>
                 </div>
 
-                <p className=' font-bold text-[1rem] mt-2'>{title}</p>
+                <p className=' font-bold text-[1rem] w-[160px] mt-2 truncate'>{title}</p>
                 <p className='text-[0.8rem]'>{year}</p>
             </div>
         </>

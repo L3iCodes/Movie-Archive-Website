@@ -4,6 +4,7 @@ import HomePage from './Pages/HomePage'
 import MoviePage from './Pages/MoviePage'
 import Navbar from './Components/Navbar'
 import BrowsePage from './Pages/BrowsePage'
+import MovieByGenrePage from './Pages/MovieByGenrePage'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<HomePage/>} />
           <Route path='/browse' element={<BrowsePage/>} />
           <Route path='/movie/:id' element={<MoviePage />} />
+          <Route path='/genre/:id/:genre' element={<MovieByGenrePage/>} />
         </Routes>
       </Router>
       

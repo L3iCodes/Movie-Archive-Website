@@ -31,7 +31,7 @@ function BrowsePage(){
     return(
         <>
             {Object.entries(genreData).map(([genreId, genreInfo]) => (
-                <Carousel className="2xl:mt-[50px] 2xl:mb-[0px] lg:pl-[10%] lg:pr-[10%]" title={genreInfo.name}>
+                <Carousel id = {genreId} genre={genreInfo.name} className="2xl:mt-[50px] 2xl:mb-[0px] lg:pl-[10%] lg:pr-[10%]" title={genreInfo.name}>
                     {genreInfo.movies.map((element, index) => (
                         <VerticalCard key={element.id || index}
                                     id={element.id}

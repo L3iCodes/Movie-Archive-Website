@@ -1,7 +1,18 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, use } from 'react';
 import {HorizontalCard, VerticalCard} from './Card';
 
-function Carousel({className, title, children}){
+import { useNavigate } from 'react-router-dom';
+
+function Carousel({className, id, title, genre, children}){
+    const navigate = useNavigate();
+
+    const redirect = () => {
+        if (id) {
+            navigate(`/genre/${id}/${genre}`)
+        }
+    }
+
+
     const scrollContainerRef = useRef(null)
     const scrollAmount = 296;
     
@@ -43,14 +54,13 @@ function Carousel({className, title, children}){
         });
     };
 
-   
-
     return(
         <>
             <div className={`pl-[5%] pr-[5%] mt-9 relative w-full
                             xl:mt-[-50px] xl:mb-[120px] lg:pl-[10%] lg:pr-[10%] z-20 ${className}`}>
                 <p className='mb-2 text-[1rem] font-bold tracking-widest
-                              xl:text-[1.3rem]'>{title}</p>
+                              xl:text-[1.3rem]
+                             hover:text-accent cursor-pointer' onClick={redirect}>{title}</p>
                 <div className='w-full flex overflow-hidden gap-3 relative'>
                     
                     <div className='flex gap-3 overflow-x-auto hide-scrollbar' ref={scrollContainerRef}>
